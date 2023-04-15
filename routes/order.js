@@ -51,8 +51,14 @@ router.post("/order",middleware, async (req, res) => {
                 delete savedOTPS[phonenumber];
             }, 60000
         )
+      console.log({
+        status: jsonc.parse(jsonc.stringify(response)).data.status,
+          phonenumber: phonenumber,
+          order_id: result[0][0][0].order_id
+      })
       
             res.json({
+              status: jsonc.parse(jsonc.stringify(response)).data.status,
                 phonenumber: phonenumber,
                 order_id: result[0][0][0].order_id
             })

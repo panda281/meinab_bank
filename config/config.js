@@ -1,7 +1,7 @@
 const config = {
-  user: "meinab_bank",
-  password: "Ca-jgB@[+JHo",
-  host: "188.165.200.69",
+  user: "root",
+  password: "panda@123",
+  host: "127.0.0.1",
   database: "meinab_bank",
   // waitForConnections: true,
   // connectionLimit: 10,
