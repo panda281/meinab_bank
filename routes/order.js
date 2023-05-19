@@ -78,7 +78,7 @@ router.post("/order",middleware, async (req, res) => {
 
   });
 
-  router.post("/resend_OTP",middleware, async (req, res) => {
+router.post("/resend_OTP",middleware, async (req, res) => {
     const connection = await pool.getConnection((err, conn) => {
       if (err) {
         res.status(500)
@@ -138,8 +138,7 @@ router.post("/order",middleware, async (req, res) => {
 
   });
 
-
-  router.post('/verify', middleware, async (req, res) => {
+router.post('/verify', middleware, async (req, res) => {
     let otprecived = req.body.otp;
     let phonenumber = req.customer_phone_no;
     if (savedOTPS[phonenumber] == otprecived) {
@@ -173,7 +172,7 @@ router.post("/order",middleware, async (req, res) => {
     else {
         res.status(500).send("Invalid OTP")
     }
-})
+  })
 
 
   module.exports = router;
