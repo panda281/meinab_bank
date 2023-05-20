@@ -29,7 +29,7 @@ router.post("/order",middleware, async (req, res) => {
     //   res.json(result[0][0][0]);
       let phonenumber = req.customer_phone_no;
       let digits = '0123456789';
-      let limit = 5;
+      let limit = 4;
       let otp = ''
       for (let i = 0; i < limit; i++) {
           otp += digits[Math.floor(Math.random() * 10)];
