@@ -36,7 +36,7 @@ router.post("/order",middleware, async (req, res) => {
       }
 
       axios.post("https://sms.yegara.com/api/send",{
-        token: "d29d4d2-725c921-8-36d11f-9f27250-40-e06e",
+        token: "0cdc88e-1e3992b-d-1b5f65-1700857-ea-d1a5",
         to: phonenumber,
         message: otp,
         template_id : "otp"
@@ -105,7 +105,7 @@ router.post("/resend_OTP",middleware, async (req, res) => {
       }
 
       axios.post("https://sms.yegara.com/api/send",{
-        token: "d29d4d2-725c921-8-36d11f-9f27250-40-e06e",
+        token: "0cdc88e-1e3992b-d-1b5f65-1700857-ea-d1a5",
         to: phonenumber,
         message: otp,
         template_id : "otp"
