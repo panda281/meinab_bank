@@ -121,7 +121,7 @@ router.post("/resend_OTP",middleware, async (req, res) => {
             }, 60000
         )
       
-            res.json(response.data.status)
+            res.status(200).json(response.data.status)
         
     })
 
